@@ -10,9 +10,3 @@ RatioControl
 RatioTest <- sum(GroceryData$VisitPageFlag2[GroceryData$Group == 'Test'])/
 nrow(GroceryData[GroceryData$Group == "Test",])
 RatioTest
-
-#Regression Modelling
-Model1 <- glm(VisitPageFlag2 ~ ServerID,
-                          family = "binomial",
-                          data = GroceryData)
-summary(Model1)
